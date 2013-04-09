@@ -33,5 +33,9 @@ sudo -u vagrant git clone git://github.com/sstephenson/ruby-build.git /home/vagr
 sudo -u vagrant echo 'gem: --no-ri --no-rdoc' >> /home/vagrant/.gemrc
 
 # install required ruby versions
-sudo -u vagrant -i rbenv install 2.0.0-p0 && rbenv shell 2.0.0-p0 && gem install bundler && rbenv rehash
+sudo -u vagrant -i rbenv install 2.0.0-p0
+sudo -u vagrant -i rbenv global 2.0.0-p0
+sudo -u vagrant -i ruby -v
+sudo -u vagrant -i gem install bundler --no-ri --no-rdoc
+sudo -u vagrant -i rbenv rehash
 
